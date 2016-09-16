@@ -92,23 +92,23 @@ class AxesDrawer
             formatter.minimumIntegerDigits = 1
 
             // radiate the bbox out until the hashmarks are further out than the bounds
-            while !bbox.contains(bounds)
-            {
-                let label = formatter.string(from: (origin.x-bbox.minX) / pointsPerUnit)!
-                if let leftHashmarkPoint = alignedPoint(x: bbox.minX, y: origin.y, insideBounds:bounds) {
-                    drawHashmarkAtLocation(leftHashmarkPoint, .top("-\(label)"))
-                }
-                if let rightHashmarkPoint = alignedPoint(x: bbox.maxX, y: origin.y, insideBounds:bounds) {
-                    drawHashmarkAtLocation(rightHashmarkPoint, .top(label))
-                }
-                if let topHashmarkPoint = alignedPoint(x: origin.x, y: bbox.minY, insideBounds:bounds) {
-                    drawHashmarkAtLocation(topHashmarkPoint, .left(label))
-                }
-                if let bottomHashmarkPoint = alignedPoint(x: origin.x, y: bbox.maxY, insideBounds:bounds) {
-                    drawHashmarkAtLocation(bottomHashmarkPoint, .left("-\(label)"))
-                }
-                bbox.insetInPlace(dx: -pointsPerHashmark, dy: -pointsPerHashmark)
-            }
+//            while !bbox.contains(bounds)
+//            {
+//                let label = formatter.string(from: (origin.x-bbox.minX) / pointsPerUnit)!
+//                if let leftHashmarkPoint = alignedPoint(x: bbox.minX, y: origin.y, insideBounds:bounds) {
+//                    drawHashmarkAtLocation(leftHashmarkPoint, .top("-\(label)"))
+//                }
+//                if let rightHashmarkPoint = alignedPoint(x: bbox.maxX, y: origin.y, insideBounds:bounds) {
+//                    drawHashmarkAtLocation(rightHashmarkPoint, .top(label))
+//                }
+//                if let topHashmarkPoint = alignedPoint(x: origin.x, y: bbox.minY, insideBounds:bounds) {
+//                    drawHashmarkAtLocation(topHashmarkPoint, .left(label))
+//                }
+//                if let bottomHashmarkPoint = alignedPoint(x: origin.x, y: bbox.maxY, insideBounds:bounds) {
+//                    drawHashmarkAtLocation(bottomHashmarkPoint, .left("-\(label)"))
+//                }
+//                bbox.insetInPlace(dx: -pointsPerHashmark, dy: -pointsPerHashmark)
+//            }
         }
     }
     
