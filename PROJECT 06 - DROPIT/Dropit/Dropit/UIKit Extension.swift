@@ -9,7 +9,7 @@
 import UIKit
 
 extension CGFloat {
-    static func random(max: Int) -> CGFloat {
+    static func random(_ max: Int) -> CGFloat {
         return CGFloat(arc4random() % UInt32(max))
     }
 }
@@ -17,12 +17,12 @@ extension CGFloat {
 extension UIColor {
     class var random: UIColor {
         switch arc4random() % 5 {
-        case 0: return UIColor.greenColor()
-        case 1: return UIColor.blueColor()
-        case 2: return UIColor.lightGrayColor()
-        case 3: return UIColor.orangeColor()
-        case 4: return UIColor.yellowColor()
-        default: return UIColor.redColor()
+        case 0: return UIColor.green
+        case 1: return UIColor.blue
+        case 2: return UIColor.lightGray
+        case 3: return UIColor.orange
+        case 4: return UIColor.yellow
+        default: return UIColor.red
         }
     }
 }
@@ -41,16 +41,16 @@ extension CGRect {
 }
 
 extension UIView {
-    func hitTest(p: CGPoint) -> UIView? {
-        return hitTest(p, withEvent: nil)
+    func hitTest(_ p: CGPoint) -> UIView? {
+        return hitTest(p, with: nil)
     }
 }
 
 extension UIBezierPath {
-    class func lineFrom(from: CGPoint, to: CGPoint) -> UIBezierPath {
+    class func lineFrom(_ from: CGPoint, to: CGPoint) -> UIBezierPath {
         let path = UIBezierPath()
-        path.moveToPoint(from)
-        path.addLineToPoint(to)
+        path.move(to: from)
+        path.addLine(to: to)
         return path
     }
 }

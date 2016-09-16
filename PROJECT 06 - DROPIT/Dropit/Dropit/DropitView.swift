@@ -11,17 +11,17 @@ import CoreMotion
 
 class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
 {
-    private lazy var animator: UIDynamicAnimator = {
+    fileprivate lazy var animator: UIDynamicAnimator = {
         let animator = UIDynamicAnimator(referenceView: self)
         animator.delegate = self
         return animator
     }()
     
-    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+    func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
         removeCompletedRow()
     }
     
-    private let dropBehavior = FallingObjectBehavior()
+    fileprivate let dropBehavior = FallingObjectBehavior()
     
     var animating = false {
         didSet {
@@ -40,21 +40,21 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
         }
     }
     
-    private let motionManager = CMMotionManager()
+    fileprivate let motionManager = CMMotionManager()
     
-    private func updateRealGravity() {
+    fileprivate func updateRealGravity() {
         if realGravity {
-            if motionManager.accelerometerAvailable && !motionManager.accelerometerActive {
+            if motionManager.isAccelerometerAvailable && !motionManager.isAccelerometerActive {
                 motionManager.accelerometerUpdateInterval = 0.25
-                motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue())
+                motionManager.startAccelerometerUpdates(to: OperationQueue.main)
                 { [unowned self] (data, error) in
                     if self.dropBehavior.dynamicAnimator != nil {
                         if var dx = data?.acceleration.x, var dy = data?.acceleration.y {
-                            switch UIDevice.currentDevice().orientation {
-                            case .Portrait: dy = -dy
-                            case .PortraitUpsideDown: break
-                            case .LandscapeRight: swap(&dx, &dy)
-                            case .LandscapeLeft: swap(&dx, &dy); dy = -dy
+                            switch UIDevice.current.orientation {
+                            case .portrait: dy = -dy
+                            case .portraitUpsideDown: break
+                            case .landscapeRight: swap(&dx, &dy)
+                            case .landscapeLeft: swap(&dx, &dy); dy = -dy
                             default: dx = 0; dy = 0;
                             }
                             self.dropBehavior.gravity.gravityDirection = CGVector(dx: dx, dy: dy)
@@ -69,7 +69,7 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
         }
     }
     
-    private var attachment: UIAttachmentBehavior? {
+    fileprivate var attachment: UIAttachmentBehavior? {
         willSet {
             if attachment != nil {
                 animator.removeBehavior(attachment!)
@@ -90,28 +90,28 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
     }
     
     
-    private struct PathNames {
+    fileprivate struct PathNames {
         static let MiddleBarrier = "MiddleBarrier"
         static let Attachment = "Attachment"
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let path = UIBezierPath(ovalInRect: CGRect(center: bounds.mid, size: dropSize))
+        let path = UIBezierPath(ovalIn: CGRect(center: bounds.mid, size: dropSize))
         dropBehavior.addBarrier(path, named: PathNames.MiddleBarrier)
         bezierPaths[PathNames.MiddleBarrier] = path
     }
     
-    func grabDrop(recognizer: UIPanGestureRecognizer) {
-        let gesturePoint = recognizer.locationInView(self)
+    func grabDrop(_ recognizer: UIPanGestureRecognizer) {
+        let gesturePoint = recognizer.location(in: self)
         switch recognizer.state {
-        case .Began:
+        case .began:
             // create attachment
-            if let dropToAttachTo = lastDrop where dropToAttachTo.superview != nil {
+            if let dropToAttachTo = lastDrop , dropToAttachTo.superview != nil {
                 attachment = UIAttachmentBehavior(item: dropToAttachTo, attachedToAnchor: gesturePoint)
             }
 //            lastDrop = nil
-        case .Changed:
+        case .changed:
             // create attachment's anchor point
             attachment!.anchorPoint = gesturePoint
         default:
@@ -119,7 +119,7 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
         }
     }
     
-    private func removeCompletedRow()
+    fileprivate func removeCompletedRow()
     {
         var dropsToRemove = [UIView]()
         
@@ -130,7 +130,7 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
             var dropsTested = 0
             var dropsFound = [UIView]()
             while dropsTested < dropsPerRow {
-                if let hitView = hitTest(hitTestRect.mid) where hitView.superview == self {
+                if let hitView = hitTest(hitTestRect.mid) , hitView.superview == self {
                     dropsFound.append(hitView)
                 } else {
                     break
@@ -149,14 +149,14 @@ class DropitView: NamedBezierPathsView, UIDynamicAnimatorDelegate
         }
     }
     
-    private let dropsPerRow = 10
+    fileprivate let dropsPerRow = 10
     
-    private var dropSize: CGSize {
+    fileprivate var dropSize: CGSize {
         let size = bounds.size.width / CGFloat(dropsPerRow)
         return CGSize(width: size, height: size)
     }
     
-    private var lastDrop: UIView?
+    fileprivate var lastDrop: UIView?
     
     func addDrop()
     {
