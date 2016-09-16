@@ -1,0 +1,11 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target '8 Minute Workout' do
+
+pod 'ChameleonFramework', :git => 'https://github.com/ViccAlexander/Chameleon.git', :branch => 'swift3'
+pod 'MZTimerLabel', '~> 0.5.4' ## 计数器
+pod "youtube-ios-player-helper" ## youtube视频
+
+end
+

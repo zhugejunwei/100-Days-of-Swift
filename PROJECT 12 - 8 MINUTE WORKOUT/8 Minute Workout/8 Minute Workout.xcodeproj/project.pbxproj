@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2305D90D1D8AE50200BEAE74 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305D90C1D8AE50200BEAE74 /* WorkoutViewController.swift */; };
+		2329A9591D8A21E500387C3F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2329A9581D8A21E500387C3F /* MainViewController.swift */; };
+		235DAA671D89F0250081DA83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DAA661D89F0250081DA83 /* AppDelegate.swift */; };
+		235DAA6C1D89F0250081DA83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235DAA6A1D89F0250081DA83 /* Main.storyboard */; };
+		235DAA6E1D89F0250081DA83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235DAA6D1D89F0250081DA83 /* Assets.xcassets */; };
+		235DAA711D89F0250081DA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235DAA6F1D89F0250081DA83 /* LaunchScreen.storyboard */; };
+		235DAA791D89F25D0081DA83 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DAA781D89F25D0081DA83 /* WorkoutTableViewCell.swift */; };
+		235DAA7B1D89F7DE0081DA83 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DAA7A1D89F7DE0081DA83 /* DetailViewController.swift */; };
+		235DAA7E1D8A13840081DA83 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DAA7D1D8A13840081DA83 /* Workout.swift */; };
+		235DAA801D8A18E70081DA83 /* WorkoutData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DAA7F1D8A18E70081DA83 /* WorkoutData.swift */; };
+		B6056DE836F293162D2E974E /* Pods_8_Minute_Workout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED27815221D3A3F12B45B36 /* Pods_8_Minute_Workout.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2305D90C1D8AE50200BEAE74 /* WorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		2329A9581D8A21E500387C3F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		235DAA631D89F0250081DA83 /* 8 Minute Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8 Minute Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		235DAA661D89F0250081DA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		235DAA6B1D89F0250081DA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		235DAA6D1D89F0250081DA83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		235DAA701D89F0250081DA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		235DAA721D89F0250081DA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235DAA781D89F25D0081DA83 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		235DAA7A1D89F7DE0081DA83 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		235DAA7D1D8A13840081DA83 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		235DAA7F1D8A18E70081DA83 /* WorkoutData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutData.swift; sourceTree = "<group>"; };
+		5F22214943B07FBAB6FE3298 /* Pods-8 Minute Workout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-8 Minute Workout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-8 Minute Workout/Pods-8 Minute Workout.debug.xcconfig"; sourceTree = "<group>"; };
+		63AD04B68E44EDB59EDC7C2D /* Pods-8 Minute Workout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-8 Minute Workout.release.xcconfig"; path = "Pods/Target Support Files/Pods-8 Minute Workout/Pods-8 Minute Workout.release.xcconfig"; sourceTree = "<group>"; };
+		7ED27815221D3A3F12B45B36 /* Pods_8_Minute_Workout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_8_Minute_Workout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		235DAA601D89F0250081DA83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6056DE836F293162D2E974E /* Pods_8_Minute_Workout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2305D9081D8AE36800BEAE74 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2329A9581D8A21E500387C3F /* MainViewController.swift */,
+				235DAA781D89F25D0081DA83 /* WorkoutTableViewCell.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		2305D9091D8AE39400BEAE74 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				235DAA7A1D89F7DE0081DA83 /* DetailViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		2305D90A1D8AE3A400BEAE74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				235DAA7D1D8A13840081DA83 /* Workout.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2305D90B1D8AE3CB00BEAE74 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				235DAA7F1D8A18E70081DA83 /* WorkoutData.swift */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		235DAA5A1D89F0250081DA83 = {
+			isa = PBXGroup;
+			children = (
+				235DAA651D89F0250081DA83 /* 8 Minute Workout */,
+				235DAA641D89F0250081DA83 /* Products */,
+				DFA0EB4D849D79DB7767C307 /* Pods */,
+				9DD00B6C65012883107362F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		235DAA641D89F0250081DA83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				235DAA631D89F0250081DA83 /* 8 Minute Workout.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		235DAA651D89F0250081DA83 /* 8 Minute Workout */ = {
+			isa = PBXGroup;
+			children = (
+				235DAA6A1D89F0250081DA83 /* Main.storyboard */,
+				2305D90A1D8AE3A400BEAE74 /* Model */,
+				2305D90B1D8AE3CB00BEAE74 /* DataSource */,
+				2305D9081D8AE36800BEAE74 /* Main */,
+				2305D9091D8AE39400BEAE74 /* Detail */,
+				239E96F51D8B4ADD00D6F931 /* WorkoutView */,
+				235DAA7C1D89F7F70081DA83 /* Supporting Files */,
+			);
+			path = "8 Minute Workout";
+			sourceTree = "<group>";
+		};
+		235DAA7C1D89F7F70081DA83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				235DAA661D89F0250081DA83 /* AppDelegate.swift */,
+				235DAA6D1D89F0250081DA83 /* Assets.xcassets */,
+				235DAA6F1D89F0250081DA83 /* LaunchScreen.storyboard */,
+				235DAA721D89F0250081DA83 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		239E96F51D8B4ADD00D6F931 /* WorkoutView */ = {
+			isa = PBXGroup;
+			children = (
+				2305D90C1D8AE50200BEAE74 /* WorkoutViewController.swift */,
+			);
+			name = WorkoutView;
+			sourceTree = "<group>";
+		};
+		9DD00B6C65012883107362F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ED27815221D3A3F12B45B36 /* Pods_8_Minute_Workout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFA0EB4D849D79DB7767C307 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F22214943B07FBAB6FE3298 /* Pods-8 Minute Workout.debug.xcconfig */,
+				63AD04B68E44EDB59EDC7C2D /* Pods-8 Minute Workout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		235DAA621D89F0250081DA83 /* 8 Minute Workout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 235DAA751D89F0250081DA83 /* Build configuration list for PBXNativeTarget "8 Minute Workout" */;
+			buildPhases = (
+				8C976BC1A3AFBB1F5E68D15C /* [CP] Check Pods Manifest.lock */,
+				235DAA5F1D89F0250081DA83 /* Sources */,
+				235DAA601D89F0250081DA83 /* Frameworks */,
+				235DAA611D89F0250081DA83 /* Resources */,
+				C5B40161FF20CF16F0BB54EF /* [CP] Embed Pods Frameworks */,
+				84D6D85EA047CC356B1F371D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "8 Minute Workout";
+			productName = "8 Minute Workout";
+			productReference = 235DAA631D89F0250081DA83 /* 8 Minute Workout.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		235DAA5B1D89F0250081DA83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "University of Pittsburgh";
+				TargetAttributes = {
+					235DAA621D89F0250081DA83 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KMHYCH2A7R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 235DAA5E1D89F0250081DA83 /* Build configuration list for PBXProject "8 Minute Workout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 235DAA5A1D89F0250081DA83;
+			productRefGroup = 235DAA641D89F0250081DA83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				235DAA621D89F0250081DA83 /* 8 Minute Workout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		235DAA611D89F0250081DA83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235DAA711D89F0250081DA83 /* LaunchScreen.storyboard in Resources */,
+				235DAA6E1D89F0250081DA83 /* Assets.xcassets in Resources */,
+				235DAA6C1D89F0250081DA83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84D6D85EA047CC356B1F371D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-8 Minute Workout/Pods-8 Minute Workout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C976BC1A3AFBB1F5E68D15C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B40161FF20CF16F0BB54EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-8 Minute Workout/Pods-8 Minute Workout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		235DAA5F1D89F0250081DA83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				235DAA791D89F25D0081DA83 /* WorkoutTableViewCell.swift in Sources */,
+				235DAA801D8A18E70081DA83 /* WorkoutData.swift in Sources */,
+				2305D90D1D8AE50200BEAE74 /* WorkoutViewController.swift in Sources */,
+				235DAA671D89F0250081DA83 /* AppDelegate.swift in Sources */,
+				2329A9591D8A21E500387C3F /* MainViewController.swift in Sources */,
+				235DAA7B1D89F7DE0081DA83 /* DetailViewController.swift in Sources */,
+				235DAA7E1D8A13840081DA83 /* Workout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		235DAA6A1D89F0250081DA83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				235DAA6B1D89F0250081DA83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		235DAA6F1D89F0250081DA83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				235DAA701D89F0250081DA83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		235DAA731D89F0250081DA83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		235DAA741D89F0250081DA83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		235DAA761D89F0250081DA83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F22214943B07FBAB6FE3298 /* Pods-8 Minute Workout.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KMHYCH2A7R;
+				INFOPLIST_FILE = "8 Minute Workout/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.pitt.8MinWorkout.junweizhuge.--Minute-Workout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		235DAA771D89F0250081DA83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63AD04B68E44EDB59EDC7C2D /* Pods-8 Minute Workout.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KMHYCH2A7R;
+				INFOPLIST_FILE = "8 Minute Workout/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.pitt.8MinWorkout.junweizhuge.--Minute-Workout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		235DAA5E1D89F0250081DA83 /* Build configuration list for PBXProject "8 Minute Workout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				235DAA731D89F0250081DA83 /* Debug */,
+				235DAA741D89F0250081DA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		235DAA751D89F0250081DA83 /* Build configuration list for PBXNativeTarget "8 Minute Workout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				235DAA761D89F0250081DA83 /* Debug */,
+				235DAA771D89F0250081DA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 235DAA5B1D89F0250081DA83 /* Project object */;
+}

@@ -1,0 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/MZTimerLabel" "$PODS_CONFIGURATION_BUILD_DIR/youtube-ios-player-helper"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework/ChameleonFramework.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MZTimerLabel/MZTimerLabel.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/youtube-ios-player-helper/youtube_ios_player_helper.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "ChameleonFramework" -framework "MZTimerLabel" -framework "youtube_ios_player_helper"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods

@@ -1,0 +1,30 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - MZTimerLabel (0.5.4)
+  - youtube-ios-player-helper (0.1.6)
+
+DEPENDENCIES:
+  - ChameleonFramework (from `https://github.com/ViccAlexander/Chameleon.git`, branch `swift3`)
+  - MZTimerLabel (~> 0.5.4)
+  - youtube-ios-player-helper
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :branch: swift3
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 17c6fffe5fa762a4925b16cd7d7898fa9fb53ad8
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+
+PODFILE CHECKSUM: 9f4915a92f27936373ce0efa0d174de39e09e2ec
+
+COCOAPODS: 1.0.1

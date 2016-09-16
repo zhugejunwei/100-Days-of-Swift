@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		230BCFA11D7DEB5E00D8FF5C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BCFA01D7DEB5E00D8FF5C /* NotificationCenter.framework */; };
+		230BCFA41D7DEB5E00D8FF5C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230BCFA31D7DEB5E00D8FF5C /* TodayViewController.swift */; };
+		230BCFA71D7DEB5E00D8FF5C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230BCFA51D7DEB5E00D8FF5C /* MainInterface.storyboard */; };
+		230BCFAB1D7DEB5E00D8FF5C /* TestExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D331CDCF6A0007F9241 /* AppDelegate.swift */; };
+		232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D351CDCF6A0007F9241 /* FaceViewController.swift */; };
+		232D9D391CDCF6A0007F9241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D371CDCF6A0007F9241 /* Main.storyboard */; };
+		232D9D3B1CDCF6A0007F9241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */; };
+		232D9D3E1CDCF6A0007F9241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */; };
+		232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D9D461CDCF7A7007F9241 /* FaceView.swift */; };
+		234C4F7E1CE7A03000E6259E /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */; };
+		2366F9601D11EC1A00B5846B /* EyeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2366F95F1D11EC1A00B5846B /* EyeView.swift */; };
+		23AC892D1D121030009D3950 /* SimpleTimerTodayExtenstion.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 23AC89201D121030009D3950 /* SimpleTimerTodayExtenstion.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		23B5424B1CDE686300E2A24E /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B5424A1CDE686300E2A24E /* FacialExpression.swift */; };
+		23FD10A21D1079ED001AED08 /* BlinkingFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD10A11D1079ED001AED08 /* BlinkingFaceViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		230BCFA91D7DEB5E00D8FF5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 232D9D281CDCF6A0007F9241 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 230BCF9D1D7DEB5E00D8FF5C;
+			remoteInfo = TestExtension;
+		};
+		23AC892B1D121030009D3950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 232D9D281CDCF6A0007F9241 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23AC891F1D121030009D3950;
+			remoteInfo = SimpleTimerTodayExtenstion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		23AC89311D121030009D3950 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				230BCFAB1D7DEB5E00D8FF5C /* TestExtension.appex in Embed App Extensions */,
+				23AC892D1D121030009D3950 /* SimpleTimerTodayExtenstion.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TestExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		230BCFA01D7DEB5E00D8FF5C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		230BCFA31D7DEB5E00D8FF5C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		230BCFA61D7DEB5E00D8FF5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		230BCFA81D7DEB5E00D8FF5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232D9D301CDCF6A0007F9241 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		232D9D331CDCF6A0007F9241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		232D9D351CDCF6A0007F9241 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		232D9D381CDCF6A0007F9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		232D9D3D1CDCF6A0007F9241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		232D9D3F1CDCF6A0007F9241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232D9D461CDCF7A7007F9241 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
+		2366F95F1D11EC1A00B5846B /* EyeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyeView.swift; sourceTree = "<group>"; };
+		23AC89201D121030009D3950 /* SimpleTimerTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SimpleTimerTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B5424A1CDE686300E2A24E /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		23FD10A11D1079ED001AED08 /* BlinkingFaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingFaceViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		230BCF9B1D7DEB5E00D8FF5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230BCFA11D7DEB5E00D8FF5C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232D9D2D1CDCF6A0007F9241 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AC891D1D121030009D3950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		230BCF9F1D7DEB5E00D8FF5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				230BCFA01D7DEB5E00D8FF5C /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		230BCFA21D7DEB5E00D8FF5C /* TestExtension */ = {
+			isa = PBXGroup;
+			children = (
+				230BCFA31D7DEB5E00D8FF5C /* TodayViewController.swift */,
+				230BCFA51D7DEB5E00D8FF5C /* MainInterface.storyboard */,
+				230BCFA81D7DEB5E00D8FF5C /* Info.plist */,
+			);
+			path = TestExtension;
+			sourceTree = "<group>";
+		};
+		232D9D271CDCF6A0007F9241 = {
+			isa = PBXGroup;
+			children = (
+				232D9D321CDCF6A0007F9241 /* FaceIt */,
+				230BCFA21D7DEB5E00D8FF5C /* TestExtension */,
+				230BCF9F1D7DEB5E00D8FF5C /* Frameworks */,
+				232D9D311CDCF6A0007F9241 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		232D9D311CDCF6A0007F9241 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				232D9D301CDCF6A0007F9241 /* FaceIt.app */,
+				23AC89201D121030009D3950 /* SimpleTimerTodayExtenstion.appex */,
+				230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		232D9D321CDCF6A0007F9241 /* FaceIt */ = {
+			isa = PBXGroup;
+			children = (
+				23B5424A1CDE686300E2A24E /* FacialExpression.swift */,
+				234C4F7D1CE7A03000E6259E /* EmotionsViewController.swift */,
+				232D9D461CDCF7A7007F9241 /* FaceView.swift */,
+				232D9D351CDCF6A0007F9241 /* FaceViewController.swift */,
+				23FD10A11D1079ED001AED08 /* BlinkingFaceViewController.swift */,
+				2366F95F1D11EC1A00B5846B /* EyeView.swift */,
+				232D9D371CDCF6A0007F9241 /* Main.storyboard */,
+				232D9D451CDCF6B3007F9241 /* Supporting Files */,
+			);
+			path = FaceIt;
+			sourceTree = "<group>";
+		};
+		232D9D451CDCF6B3007F9241 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				232D9D331CDCF6A0007F9241 /* AppDelegate.swift */,
+				232D9D3A1CDCF6A0007F9241 /* Assets.xcassets */,
+				232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */,
+				232D9D3F1CDCF6A0007F9241 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		230BCF9D1D7DEB5E00D8FF5C /* TestExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 230BCFAC1D7DEB5E00D8FF5C /* Build configuration list for PBXNativeTarget "TestExtension" */;
+			buildPhases = (
+				230BCF9A1D7DEB5E00D8FF5C /* Sources */,
+				230BCF9B1D7DEB5E00D8FF5C /* Frameworks */,
+				230BCF9C1D7DEB5E00D8FF5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestExtension;
+			productName = TestExtension;
+			productReference = 230BCF9E1D7DEB5E00D8FF5C /* TestExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		232D9D2F1CDCF6A0007F9241 /* FaceIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 232D9D421CDCF6A0007F9241 /* Build configuration list for PBXNativeTarget "FaceIt" */;
+			buildPhases = (
+				232D9D2C1CDCF6A0007F9241 /* Sources */,
+				232D9D2D1CDCF6A0007F9241 /* Frameworks */,
+				232D9D2E1CDCF6A0007F9241 /* Resources */,
+				23AC89311D121030009D3950 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23AC892C1D121030009D3950 /* PBXTargetDependency */,
+				230BCFAA1D7DEB5E00D8FF5C /* PBXTargetDependency */,
+			);
+			name = FaceIt;
+			productName = FaceIt;
+			productReference = 232D9D301CDCF6A0007F9241 /* FaceIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23AC891F1D121030009D3950 /* SimpleTimerTodayExtenstion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23AC89301D121030009D3950 /* Build configuration list for PBXNativeTarget "SimpleTimerTodayExtenstion" */;
+			buildPhases = (
+				23AC891C1D121030009D3950 /* Sources */,
+				23AC891D1D121030009D3950 /* Frameworks */,
+				23AC891E1D121030009D3950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTimerTodayExtenstion;
+			productName = SimpleTimerTodayExtenstion;
+			productReference = 23AC89201D121030009D3950 /* SimpleTimerTodayExtenstion.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		232D9D281CDCF6A0007F9241 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Stanford University";
+				TargetAttributes = {
+					230BCF9D1D7DEB5E00D8FF5C = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KMHYCH2A7R;
+					};
+					232D9D2F1CDCF6A0007F9241 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KMHYCH2A7R;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					23AC891F1D121030009D3950 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KMHYCH2A7R;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 232D9D2B1CDCF6A0007F9241 /* Build configuration list for PBXProject "FaceIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 232D9D271CDCF6A0007F9241;
+			productRefGroup = 232D9D311CDCF6A0007F9241 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				232D9D2F1CDCF6A0007F9241 /* FaceIt */,
+				23AC891F1D121030009D3950 /* SimpleTimerTodayExtenstion */,
+				230BCF9D1D7DEB5E00D8FF5C /* TestExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		230BCF9C1D7DEB5E00D8FF5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230BCFA71D7DEB5E00D8FF5C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232D9D2E1CDCF6A0007F9241 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				232D9D3E1CDCF6A0007F9241 /* LaunchScreen.storyboard in Resources */,
+				232D9D3B1CDCF6A0007F9241 /* Assets.xcassets in Resources */,
+				232D9D391CDCF6A0007F9241 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AC891E1D121030009D3950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		230BCF9A1D7DEB5E00D8FF5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230BCFA41D7DEB5E00D8FF5C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		232D9D2C1CDCF6A0007F9241 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2366F9601D11EC1A00B5846B /* EyeView.swift in Sources */,
+				23FD10A21D1079ED001AED08 /* BlinkingFaceViewController.swift in Sources */,
+				232D9D361CDCF6A0007F9241 /* FaceViewController.swift in Sources */,
+				232D9D341CDCF6A0007F9241 /* AppDelegate.swift in Sources */,
+				234C4F7E1CE7A03000E6259E /* EmotionsViewController.swift in Sources */,
+				23B5424B1CDE686300E2A24E /* FacialExpression.swift in Sources */,
+				232D9D471CDCF7A7007F9241 /* FaceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23AC891C1D121030009D3950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		230BCFAA1D7DEB5E00D8FF5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 230BCF9D1D7DEB5E00D8FF5C /* TestExtension */;
+			targetProxy = 230BCFA91D7DEB5E00D8FF5C /* PBXContainerItemProxy */;
+		};
+		23AC892C1D121030009D3950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23AC891F1D121030009D3950 /* SimpleTimerTodayExtenstion */;
+			targetProxy = 23AC892B1D121030009D3950 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		230BCFA51D7DEB5E00D8FF5C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				230BCFA61D7DEB5E00D8FF5C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		232D9D371CDCF6A0007F9241 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				232D9D381CDCF6A0007F9241 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		232D9D3C1CDCF6A0007F9241 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				232D9D3D1CDCF6A0007F9241 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		230BCFAD1D7DEB5E00D8FF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TestExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt.TestExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		230BCFAE1D7DEB5E00D8FF5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TestExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt.TestExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		232D9D401CDCF6A0007F9241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		232D9D411CDCF6A0007F9241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		232D9D431CDCF6A0007F9241 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FaceIt/FaceIt.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FaceIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		232D9D441CDCF6A0007F9241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FaceIt/FaceIt.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = FaceIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		23AC892E1D121030009D3950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleTimerTodayExtenstion/SimpleTimerTodayExtenstion.entitlements;
+				INFOPLIST_FILE = SimpleTimerTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt.SimpleTimerTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		23AC892F1D121030009D3950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SimpleTimerTodayExtenstion/SimpleTimerTodayExtenstion.entitlements;
+				INFOPLIST_FILE = SimpleTimerTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.junweizhuge.FaceIt.SimpleTimerTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		230BCFAC1D7DEB5E00D8FF5C /* Build configuration list for PBXNativeTarget "TestExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				230BCFAD1D7DEB5E00D8FF5C /* Debug */,
+				230BCFAE1D7DEB5E00D8FF5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		232D9D2B1CDCF6A0007F9241 /* Build configuration list for PBXProject "FaceIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232D9D401CDCF6A0007F9241 /* Debug */,
+				232D9D411CDCF6A0007F9241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		232D9D421CDCF6A0007F9241 /* Build configuration list for PBXNativeTarget "FaceIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				232D9D431CDCF6A0007F9241 /* Debug */,
+				232D9D441CDCF6A0007F9241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23AC89301D121030009D3950 /* Build configuration list for PBXNativeTarget "SimpleTimerTodayExtenstion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23AC892E1D121030009D3950 /* Debug */,
+				23AC892F1D121030009D3950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 232D9D281CDCF6A0007F9241 /* Project object */;
+}
