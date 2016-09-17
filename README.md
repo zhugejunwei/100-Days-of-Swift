@@ -1,7 +1,7 @@
 ## 100 Days of Swift ##
-I started learning Swift from July, and keep coding with Swift every day. I tried to build some enjoyable APPs. Inspired by Sam Lu's [100 Days of Swift](http://samvlu.com/index.html) project, I made my decision to build this repository to record my progression.
+I started learning Swift from July, and keep coding with Swift every day. I tried to build some enjoyable APPs. Inspired by Sam Lu's [100 Days of Swift](http://samvlu.com/index.html) project, I built this repository to record my progression.
 
-## Projects and Gifs
+## Projects and GIFs
 PROJECT 01 - CORE ANIMATION & LOGINANIMATION
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2001%20-%20CORE%20ANIMATION%20%26%20LOGINANIMATION/giphy.gif)
