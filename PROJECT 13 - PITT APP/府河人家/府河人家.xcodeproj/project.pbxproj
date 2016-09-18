@@ -19,7 +19,6 @@
 		233CE4371D83326A00EF3996 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 233CE4351D83326A00EF3996 /* ____.xcdatamodeld */; };
 		233CE4391D83326A00EF3996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233CE4381D83326A00EF3996 /* Assets.xcassets */; };
 		233CE43C1D83326A00EF3996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233CE43A1D83326A00EF3996 /* LaunchScreen.storyboard */; };
-		233CE4471D83326A00EF3996 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE4461D83326A00EF3996 /* ____Tests.swift */; };
 		233CE4521D83326A00EF3996 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE4511D83326A00EF3996 /* ____UITests.swift */; };
 		233CE4751D833B3B00EF3996 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE46E1D833B3B00EF3996 /* GuideViewController.swift */; };
 		233CE4761D833B3B00EF3996 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE4701D833B3B00EF3996 /* MealModel.swift */; };
@@ -74,7 +73,6 @@
 		233CE43B1D83326A00EF3996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		233CE43D1D83326A00EF3996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		233CE4421D83326A00EF3996 /* 府河人家Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "府河人家Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		233CE4461D83326A00EF3996 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
 		233CE4481D83326A00EF3996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		233CE44D1D83326A00EF3996 /* 府河人家UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "府河人家UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		233CE4511D83326A00EF3996 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 		233CE4451D83326A00EF3996 /* 府河人家Tests */ = {
 			isa = PBXGroup;
 			children = (
-				233CE4461D83326A00EF3996 /* ____Tests.swift */,
 				233CE4481D83326A00EF3996 /* Info.plist */,
 			);
 			path = "府河人家Tests";
@@ -440,19 +437,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Sichuan Gourmet";
 				TargetAttributes = {
 					233CE42A1D83326A00EF3996 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KMHYCH2A7R;
+						LastSwiftMigration = 0800;
 					};
 					233CE4411D83326A00EF3996 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 233CE42A1D83326A00EF3996;
 					};
 					233CE44C1D83326A00EF3996 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 233CE42A1D83326A00EF3996;
 					};
 				};
@@ -543,7 +543,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				233CE4471D83326A00EF3996 /* ____Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,8 +603,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -649,8 +650,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -669,6 +672,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -682,6 +686,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sichuan-gourmet.junweizhuge.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -694,6 +699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sichuan-gourmet.junweizhuge.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -705,6 +711,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sichuan-gourmet.junweizhuge.----Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/府河人家.app/府河人家";
 			};
 			name = Debug;
@@ -717,6 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sichuan-gourmet.junweizhuge.----Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/府河人家.app/府河人家";
 			};
 			name = Release;
@@ -728,6 +736,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sichuan-gourmet.junweizhuge.----UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "府河人家";
 			};
 			name = Debug;
@@ -739,6 +748,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sichuan-gourmet.junweizhuge.----UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "府河人家";
 			};
 			name = Release;

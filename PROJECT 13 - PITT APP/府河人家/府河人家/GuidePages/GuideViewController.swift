@@ -15,9 +15,9 @@ class GuideViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    private var scrollView: UIScrollView!
+    fileprivate var scrollView: UIScrollView!
     
-    private let numOfPages = 3
+    fileprivate let numOfPages = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class GuideViewController: UIViewController {
         let frame = self.view.bounds
         
         scrollView = UIScrollView(frame: frame)
-        scrollView.pagingEnabled = true
+        scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
         scrollView.scrollsToTop = false
@@ -42,7 +42,7 @@ class GuideViewController: UIViewController {
             scrollView.addSubview(imageView)
         }
         
-        self.view.insertSubview(scrollView, atIndex: 0)
+        self.view.insertSubview(scrollView, at: 0)
         
         // 给开始按钮设置圆角
         startButton.layer.cornerRadius = 18.0
@@ -50,7 +50,7 @@ class GuideViewController: UIViewController {
     }
     
     // 隐藏状态栏
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }
@@ -58,18 +58,18 @@ class GuideViewController: UIViewController {
 // MARK: UIScrollViewDelegate
 
 extension GuideViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset
         // pageControll
         pageControl.currentPage = Int(offset.x / view.bounds.width)
         if pageControl.currentPage == numOfPages - 1 {
-            UIView.animateWithDuration(0.5) {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.startButton.alpha = 1.0
-            }
+            }) 
         } else {
-            UIView.animateWithDuration(0.2) {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.startButton.alpha = 0.0
-            }
+            }) 
         }
     }
 }

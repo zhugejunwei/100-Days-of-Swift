@@ -21,7 +21,7 @@ class MealTableViewController: UITableViewController {
         loadSampleMeals()
     }
     
-    private func loadSampleMeals() {
+    fileprivate func loadSampleMeals() {
         let mealImage1 = UIImage(named: "meal1")
         let meal1 = Meal(mealImage: mealImage1, cnName: "笋尖肉丝+糖醋白菜+番茄蛋汤", enName: "shredded pork w. bamboo shot +sweet & sour napa + tomato egg soup")
         
@@ -51,21 +51,21 @@ class MealTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return meals.count
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "MealTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MealTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MealTableViewCell
         
         // Fetches the appropriate meal for the data source layout.
-        let meal = meals[indexPath.section][indexPath.row]
+        let meal = meals[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         
         cell.cnNameLabel.text = meal.cnName
         cell.enNameLabel.text = meal.enName
@@ -73,11 +73,11 @@ class MealTableViewController: UITableViewController {
         cell.imageLabel.layer.cornerRadius = 10.0
         cell.imageLabel.clipsToBounds = true
         cell.imageLabel.layer.borderWidth = 1.0
-        cell.imageLabel.layer.borderColor = UIColor.lightGrayColor().CGColor
+        cell.imageLabel.layer.borderColor = UIColor.lightGray.cgColor
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0: return "周一"
         case 1: return "周二"

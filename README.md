@@ -41,3 +41,16 @@ PROJECT 09 - PICKERVIEWDEMO
 PROJECT 10 - UIVIEWXXYBOOM
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2010%20-%20UIVIEWXXYBOOM/boom.gif)
+
+PROJECT 11 - 
+
+![]()
+
+PROJECT 12 - 8 Minute Workout
+
+![]()
+
+PROJECT 13 - Sichuan Gourmet
+
+![]()
+

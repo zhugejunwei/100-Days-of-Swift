@@ -9,9 +9,9 @@
 import UIKit
 
 class Tool {
-    class func getCurDate(date: NSDate) -> String {
-        let formatter = NSDateFormatter()
+    class func getCurDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.stringFromDate(date)
+        return formatter.string(from: date)
     }
 }

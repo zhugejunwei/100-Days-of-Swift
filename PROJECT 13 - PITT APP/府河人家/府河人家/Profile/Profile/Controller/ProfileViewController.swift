@@ -50,14 +50,14 @@ class ProfileViewController: UIViewController {
     }
     
     // 设置头像图片为圆角图片，并添加边框
-    private func setRoundPhoto() {
+    fileprivate func setRoundPhoto() {
         self.profileImage.layer.cornerRadius = 10.0
         self.profileImage.clipsToBounds = true
         self.profileImage.layer.borderWidth = 1.0
-        self.profileImage.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.profileImage.layer.borderColor = UIColor.lightGray.cgColor
     }
     
-    private func loadSampleHistory() {
+    fileprivate func loadSampleHistory() {
         
     }
 
