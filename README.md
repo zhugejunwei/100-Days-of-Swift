@@ -54,5 +54,7 @@ PROJECT 13 - Sichuan Gourmet
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2013%20-%20PITT%20APP/sichuangourmet.gif)
 
+PROJECT 14 - PITT WEATHER
 
+![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2014%20-%20PITT%20WEATHER/weather.gif)
 
