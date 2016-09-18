@@ -48,9 +48,11 @@ PROJECT 11 -
 
 PROJECT 12 - 8 Minute Workout
 
-![]()
+![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2012%20-%208%20MINUTE%20WORKOUT/workout.gif)
 
 PROJECT 13 - Sichuan Gourmet
 
-![]()
+![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2013%20-%20PITT%20APP/sichuangourmet.gif)
+
+
 
