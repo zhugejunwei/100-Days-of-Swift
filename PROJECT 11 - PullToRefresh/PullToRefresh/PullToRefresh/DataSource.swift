@@ -10,9 +10,11 @@ import Foundation
 
 class EmojiData {
     var emojis: [EmojiModel]
+    var newEmojis: [EmojiModel]
     
     init() {
         emojis = []
+        newEmojis = []
         let emoji1 = EmojiModel("😀")
         emojis.append(emoji1)
         
@@ -30,5 +32,33 @@ class EmojiData {
         
         let emoji6 = EmojiModel("😳")
         emojis.append(emoji6)
+        
+        let emoji11 = EmojiModel("😀😀😀")
+        newEmojis.append(emoji11)
+        
+        let emoji22 = EmojiModel("😬😬😬")
+        newEmojis.append(emoji22)
+        
+        let emoji33 = EmojiModel("😡😡😡")
+        newEmojis.append(emoji33)
+        
+        let emoji44 = EmojiModel("😋😋😋")
+        newEmojis.append(emoji44)
+        
+        let emoji55 = EmojiModel("😛😛😛")
+        newEmojis.append(emoji55)
+        
+        let emoji66 = EmojiModel("😳😳😳")
+        newEmojis.append(emoji66)
     }
+    
+    func emojiData() -> [EmojiModel] {
+        return emojis
+    }
+    
+    func newEmojiData() -> [EmojiModel] {
+        return newEmojis
+    }
+    
+    
 }

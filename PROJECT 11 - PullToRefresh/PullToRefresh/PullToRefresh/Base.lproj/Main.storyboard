@@ -37,30 +37,35 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="k3K-xb-fLr" firstAttribute="centerY" secondItem="Hbv-SN-kmS" secondAttribute="centerY" id="lIQ-n0-W1R"/>
+                                                <constraint firstItem="k3K-xb-fLr" firstAttribute="top" secondItem="Hbv-SN-kmS" secondAttribute="topMargin" constant="15" id="pz5-I8-0Ta"/>
                                                 <constraint firstItem="k3K-xb-fLr" firstAttribute="centerX" secondItem="Hbv-SN-kmS" secondAttribute="centerX" id="z9B-Rv-9qw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emojiLabel" destination="k3K-xb-fLr" id="3X5-MA-Viq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="9zs-sg-Zzs">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="221" id="0Sh-ae-PSz"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="9zs-sg-Zzs"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="centerX" secondItem="dqF-bN-agu" secondAttribute="centerX" id="4ps-F0-g8f"/>
+                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="leading" secondItem="dqF-bN-agu" secondAttribute="leading" id="78F-Nc-hsd"/>
                             <constraint firstItem="dqF-bN-agu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="BDG-6Y-Idt"/>
-                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fhh-Xh-cZ7"/>
-                            <constraint firstItem="dqF-bN-agu" firstAttribute="top" secondItem="9zs-sg-Zzs" secondAttribute="bottom" constant="8" symbolic="YES" id="JXx-ts-tGi"/>
+                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="U5S-Fh-Is2"/>
                             <constraint firstItem="dqF-bN-agu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g7l-oI-EOJ"/>
-                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i1S-cU-X99"/>
-                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="imm-Ai-EXG"/>
+                            <constraint firstItem="dqF-bN-agu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="237" id="lLJ-KV-JGv"/>
+                            <constraint firstItem="9zs-sg-Zzs" firstAttribute="trailing" secondItem="dqF-bN-agu" secondAttribute="trailing" id="lz8-MD-XqN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9zs-sg-Zzs" secondAttribute="bottom" constant="365" id="uAV-2h-ns5"/>
+                            <constraint firstAttribute="trailing" secondItem="9zs-sg-Zzs" secondAttribute="trailing" id="uWJ-vz-Ene"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="43o-LR-MeS"/>
+                    <connections>
+                        <outlet property="emojiTableView" destination="dqF-bN-agu" id="OjW-Bh-ymB"/>
+                        <outlet property="meImage" destination="9zs-sg-Zzs" id="2dM-W6-tQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

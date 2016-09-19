@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // This will automatically turn your status bar's style to .Lightcontent for all the view controllers inside a UINavigationController.
+//        UINavigationBar.appearance().barStyle = .blackTranslucent
         return true
     }
 

@@ -44,7 +44,9 @@ PROJECT 10 - UIVIEWXXYBOOM
 
 PROJECT 11 - TABLEVIEW DEMO
 
-![]()
+To get rid of the 35 pixel padding above a table view, just uncheck "YouStoryboard.storyboard > YouViewController > Attributes inspector > Uncheck - Adjust scroll view insets"
+
+![](https://github.com/zhugejunwei/100-Days-of-Swift/tree/master/PROJECT%2011%20-%20PullToRefresh/refresh.gif)
 
 PROJECT 12 - 8 Minute Workout
 

@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell
 {
+    @IBOutlet weak var emojiLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
