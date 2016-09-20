@@ -58,6 +58,9 @@ PROJECT 14 - PITT WEATHER
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2014%20-%20PITT%20WEATHER/weather.gif)
 
+PROJECT 15 - SHOPPINGCART ANIMATION
+
+![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2015%20-%20SHOPPING%20CART/shoppingCartAnimation.gif)
 
 ## LICENSE
 MIT
