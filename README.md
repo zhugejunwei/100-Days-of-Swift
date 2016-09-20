@@ -44,15 +44,13 @@ PROJECT 10 - UIVIEWXXYBOOM
 
 PROJECT 11 - TABLEVIEW DEMO
 
-To get rid of the 35 pixel padding above a table view, just uncheck "YouStoryboard.storyboard > YouViewController > Attributes inspector > Uncheck - Adjust scroll view insets"
-
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2011%20-%20PullToRefresh/refresh.gif)
 
 PROJECT 12 - 8 Minute Workout
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2012%20-%208%20MINUTE%20WORKOUT/workout.gif)
 
-PROJECT 13 - Sichuan Gourmet
+PROJECT 13 - Sichuan Gourmet (1st attempt)
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2013%20-%20PITT%20APP/sichuangourmet.gif)
 
@@ -61,5 +59,5 @@ PROJECT 14 - PITT WEATHER
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2014%20-%20PITT%20WEATHER/weather.gif)
 
 
-## LICENSE ##
+## LICENSE
 MIT
