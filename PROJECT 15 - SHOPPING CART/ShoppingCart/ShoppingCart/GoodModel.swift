@@ -30,13 +30,12 @@ class GoodModel: NSObject
     
     var selected: Bool = true
     
-    init(dict: [String:AnyObject]) {
+    init(dict: [String:Any]) {
         super.init()
         
         // 使用 kvo 为当前对象属性设置值
         setValuesForKeys(dict)
     }
-    
     // 防止对象属性在kvc的dict的key不匹配而崩溃
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }

@@ -57,6 +57,7 @@ class GoodListCell: UITableViewCell
         // 添加子控件
         contentView.addSubview(iconView)
         contentView.addSubview(titleLabel)
+        contentView.addSubview(descLabel)
         contentView.addSubview(addCartBtn)
         
         // constraints
@@ -87,7 +88,7 @@ class GoodListCell: UITableViewCell
     
     // MARK: - 懒加载
 
-    private lazy var iconView: UIImageView = {
+    fileprivate lazy var iconView: UIImageView = {
         let iconView = UIImageView()
         iconView.layer.cornerRadius = 30
         iconView.layer.masksToBounds = true
@@ -129,5 +130,4 @@ class GoodListCell: UITableViewCell
         // 通知代理对象，去处理后续操作
         delegate?.goodListCell(self, iconView: iconView)
     }
-
 }
