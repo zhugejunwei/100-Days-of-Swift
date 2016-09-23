@@ -99,7 +99,7 @@ class ShoppingCartViewController: UIViewController
         selectBtn.setTitle("多选\\反选", for: UIControlState())
         selectBtn.setTitleColor(UIColor.gray, for: UIControlState())
         selectBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        selectBtn.addTarget(self, action: #selector(ShoppingCartViewController.didTappedBackButton), for: .touchUpInside)
+        selectBtn.addTarget(self, action: #selector(ShoppingCartViewController.didTappedSelectButton), for: .touchUpInside)
         selectBtn.isSelected = true
         selectBtn.sizeToFit()
         return selectBtn

@@ -1,0 +1,6 @@
+framework module Pods_____ {
+  umbrella header "Pods-府河人家-umbrella.h"
+
+  export *
+  module * { export * }
+}

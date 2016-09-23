@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		231500411D861463002F0A51 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231500401D861463002F0A51 /* SettingTableViewController.swift */; };
-		231500431D86147D002F0A51 /* ProfilePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231500421D86147D002F0A51 /* ProfilePhotoTableViewCell.swift */; };
-		231500451D8614F2002F0A51 /* FirstNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231500441D8614F2002F0A51 /* FirstNameTableViewCell.swift */; };
-		231500471D8614FA002F0A51 /* LastNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231500461D8614FA002F0A51 /* LastNameTableViewCell.swift */; };
-		231500491D86150D002F0A51 /* MobileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231500481D86150D002F0A51 /* MobileTableViewCell.swift */; };
-		2315004B1D861516002F0A51 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315004A1D861516002F0A51 /* AddressTableViewCell.swift */; };
-		2315004D1D861523002F0A51 /* saySomethingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315004C1D861523002F0A51 /* saySomethingTableViewCell.swift */; };
 		233CE42F1D83326A00EF3996 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE42E1D83326A00EF3996 /* AppDelegate.swift */; };
 		233CE4341D83326A00EF3996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233CE4321D83326A00EF3996 /* Main.storyboard */; };
 		233CE4371D83326A00EF3996 /* ____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 233CE4351D83326A00EF3996 /* ____.xcdatamodeld */; };
@@ -59,12 +53,6 @@
 
 /* Begin PBXFileReference section */
 		231500401D861463002F0A51 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
-		231500421D86147D002F0A51 /* ProfilePhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoTableViewCell.swift; sourceTree = "<group>"; };
-		231500441D8614F2002F0A51 /* FirstNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstNameTableViewCell.swift; sourceTree = "<group>"; };
-		231500461D8614FA002F0A51 /* LastNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastNameTableViewCell.swift; sourceTree = "<group>"; };
-		231500481D86150D002F0A51 /* MobileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileTableViewCell.swift; sourceTree = "<group>"; };
-		2315004A1D861516002F0A51 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
-		2315004C1D861523002F0A51 /* saySomethingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = saySomethingTableViewCell.swift; sourceTree = "<group>"; };
 		233CE42B1D83326A00EF3996 /* 府河人家.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "府河人家.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		233CE42E1D83326A00EF3996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		233CE4331D83326A00EF3996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,12 +138,6 @@
 		2315003F1D861437002F0A51 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				231500421D86147D002F0A51 /* ProfilePhotoTableViewCell.swift */,
-				231500441D8614F2002F0A51 /* FirstNameTableViewCell.swift */,
-				231500461D8614FA002F0A51 /* LastNameTableViewCell.swift */,
-				231500481D86150D002F0A51 /* MobileTableViewCell.swift */,
-				2315004A1D861516002F0A51 /* AddressTableViewCell.swift */,
-				2315004C1D861523002F0A51 /* saySomethingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,21 +503,15 @@
 				233CE4901D83555200EF3996 /* RAMBadge.swift in Sources */,
 				233CE4B01D84DB0700EF3996 /* ProfileViewController.swift in Sources */,
 				233CE4791D833B3B00EF3996 /* Tool.swift in Sources */,
-				2315004B1D861516002F0A51 /* AddressTableViewCell.swift in Sources */,
-				2315004D1D861523002F0A51 /* saySomethingTableViewCell.swift in Sources */,
 				233CE4751D833B3B00EF3996 /* GuideViewController.swift in Sources */,
 				233CE4781D833B3B00EF3996 /* MealTableViewController.swift in Sources */,
 				233CE4B31D84DB0700EF3996 /* HistoryTableViewCell.swift in Sources */,
 				233CE4771D833B3B00EF3996 /* MealTableViewCell.swift in Sources */,
 				233CE48B1D83555200EF3996 /* RAMFrameItemAnimation.swift in Sources */,
 				233CE48A1D83555200EF3996 /* RAMBounceAnimation.swift in Sources */,
-				231500431D86147D002F0A51 /* ProfilePhotoTableViewCell.swift in Sources */,
 				233CE48E1D83555200EF3996 /* RAMTransitionItemAnimations.swift in Sources */,
 				233CE4B41D84DB0700EF3996 /* ProfileView.swift in Sources */,
 				233CE4911D83555200EF3996 /* RAMItemAnimationProtocol.swift in Sources */,
-				231500491D86150D002F0A51 /* MobileTableViewCell.swift in Sources */,
-				231500471D8614FA002F0A51 /* LastNameTableViewCell.swift in Sources */,
-				231500451D8614F2002F0A51 /* FirstNameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
