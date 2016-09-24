@@ -4,4 +4,6 @@ use_frameworks!
 
 target '府河人家' do
     pod 'SnapKit', '~> 3.0.0'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'Kingfisher', '~> 3.0'
 end

@@ -128,7 +128,7 @@ class MenuViewController: UIViewController
 
 extension MenuViewController {
     // click cart button, present modally
-    @objc fileprivate func didTappedCartBtn() {
+    @objc func didTappedCartBtn() {
         let shoppingCartVC = ShoppingCartViewController()
         shoppingCartVC.addFoodArray = addFoodArray
         present(UINavigationController(rootViewController: shoppingCartVC), animated: true, completion: nil)
@@ -156,12 +156,12 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         switch section {
-        case 0: return "周一"
-        case 1: return "周二"
-        case 2: return "周三"
-        case 3: return "周四"
-        case 4: return "周五"
-        default: return "周末"
+        case 0: return "Monday"
+        case 1: return "Tuesday"
+        case 2: return "Wednesday"
+        case 3: return "Thursday"
+        case 4: return "Friday"
+        default: return "Weekend"
         }
     }
 }

@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Set the global UINavigationBar property
-//        let bar = UINavigationBar.appearance()
-//        bar.tintColor = UIColor.black
-//        bar.titleTextAttributes = [NSFontAttributeName:UIFont.systemFont(ofSize: 15), NSForegroundColorAttributeName:UIColor.black]
+        let bar = UINavigationBar.appearance()
+        bar.tintColor = UIColor.black
+        bar.titleTextAttributes = [NSFontAttributeName:UIFont.systemFont(ofSize: 15), NSForegroundColorAttributeName:UIColor.black]
         
         // 设置 window
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = NewFeatureViewController()
         } else {
             // for test, go to newFeatureView every time...
-//            window?.rootViewController = MainViewController()
-            window?.rootViewController = NewFeatureViewController()
+            window?.rootViewController = MainViewController()
+//            window?.rootViewController = NewFeatureViewController()
         }
         window?.makeKeyAndVisible()
         return true

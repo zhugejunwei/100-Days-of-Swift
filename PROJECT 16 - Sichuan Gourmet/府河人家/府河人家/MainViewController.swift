@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UITabBarController {
+class MainViewController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class MainViewController: UITabBarController {
         addViewController(ProfileTableViewController(), title: NSLocalizedString("tab_profile", comment: ""))
         
         // UITabBarControllerDelegate
-//        delegate = self
+        delegate = self
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.logout), name: Notification.Name(rawValue: LoginoutNotify), object: nil)
     }
@@ -39,11 +39,11 @@ class MainViewController: UITabBarController {
     
     // add child controller
     fileprivate func addViewController(_ childController: UIViewController, title: String) {
-        let nav = UINavigationController(rootViewController: childController)
+        let nav = NavigationViewController(rootViewController: childController)
         addChildViewController(nav)
         childController.tabBarItem.title = title
         childController.tabBarItem.image = UIImage(named: "tb_\(childViewControllers.count - 1)")
-        childController.tabBarItem.selectedImage = UIImage(named: "tab_\(childViewControllers.count - 1)" + "_selected")
+        childController.tabBarItem.selectedImage = UIImage(named: "tb_\(childViewControllers.count - 1)" + "_selected")
         
         childController.tabBarItem.tag = childViewControllers.count - 1
     }

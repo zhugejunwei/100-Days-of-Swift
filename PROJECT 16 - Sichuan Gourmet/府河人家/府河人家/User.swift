@@ -8,12 +8,20 @@
 
 import UIKit
 
-class UserProfile: NSObject
+class User: NSObject
 {
+    var id: String?
     
     var userName: String?
     
-    var headImg: UIImage?
+    var headImg: String?
+        {
+        didSet{
+            if !headImg!.hasPrefix("http://") {
+                headImg = "http://static.htxq.net/" + headImg!
+            }
+        }
+    }
     
     var mobile: String?
     

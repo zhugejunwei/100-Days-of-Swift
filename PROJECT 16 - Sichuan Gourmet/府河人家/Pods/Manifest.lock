@@ -1,12 +1,18 @@
 PODS:
+  - Kingfisher (3.0.1)
+  - MBProgressHUD (1.0.0)
   - SnapKit (3.0.0)
 
 DEPENDENCIES:
+  - Kingfisher (~> 3.0)
+  - MBProgressHUD (~> 1.0.0)
   - SnapKit (~> 3.0.0)
 
 SPEC CHECKSUMS:
+  Kingfisher: d5a491b45ea453d90a31bd2c0831d5243e73a73f
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SnapKit: 98af0a4e9369d3c58f758967518081dbdc7eb1d9
 
-PODFILE CHECKSUM: dd00f2f5fdfe9e642f4dbf69f626c95ebba5feb8
+PODFILE CHECKSUM: 02969529fa87ccfc158acb3cc17d3004c5f0c3fa
 
 COCOAPODS: 1.1.0.rc.2

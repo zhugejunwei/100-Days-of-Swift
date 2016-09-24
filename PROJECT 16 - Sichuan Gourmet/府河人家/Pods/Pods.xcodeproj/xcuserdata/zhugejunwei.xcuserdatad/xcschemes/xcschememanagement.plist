@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-府河人家.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2AC314CAF2F9D972C46BD5450B65E17B</key>
+		<key>96DE0AEEA96C976FCCBD50429EBEF145</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D0485846387C789F8A62DE8559579B70</key>
+		<key>BDAF27BE15DBEE3F66D84079233BDDFA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD2F31E2E4A0C6566C416148C0E809A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -63,4 +63,4 @@ PROJECT 15 - SHOPPINGCART ANIMATION
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2015%20-%20SHOPPING%20CART/shoppingCartAnimation.gif)
 
 ## LICENSE
-MIT
+The code is distributed under the terms and conditions of the [MIT license](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/LICENSE).
