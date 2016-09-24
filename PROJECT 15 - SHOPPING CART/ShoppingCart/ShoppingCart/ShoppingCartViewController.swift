@@ -37,7 +37,7 @@ class ShoppingCartViewController: UIViewController
     
     fileprivate func prepareUI() {
         navigationItem.title = "购物车"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(ShoppingCartViewController.didTappedBackButton))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(ShoppingCartViewController.didTappedBackButton))
         view.backgroundColor = UIColor.white
         tableView.rowHeight = 80
         // 注册cell

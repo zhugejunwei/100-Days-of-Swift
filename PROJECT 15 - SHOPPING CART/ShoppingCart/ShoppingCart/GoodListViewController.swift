@@ -18,7 +18,7 @@ class GoodListViewController: UIViewController
     // MARK: - Property
     
     // 商品模型数组初始化
-    fileprivate var goodArray = [GoodModel]()
+    fileprivate var goodArray = [Array<GoodModel>]()
     
     // 商品列表cell的重用标识符
     fileprivate let goodListCellIdentifier = "goodListCell"
@@ -37,7 +37,7 @@ class GoodListViewController: UIViewController
          view 只会 load 一次，一般在这里在这里进行一些初始化的工作，我们一般不用 init 方法，因为此时 outlet 已经设置完毕了。我们一般也将 update UI 的工作放在这个方法里。但是 view 的 geometry 不在这里设置，因为还不知道使用的设备是什么。这里的 geometry 的意思是 view 的大小尺寸，横向还是纵向之类的。具体请见（http://www.jianshu.com/p/5e784091dae3）。
          */
         // 初始化一些假数据
-        for i in 0..<10 {
+        for i in 0..<5 {
             var dict = [String:Any]()
             dict["iconName"] = "goodicon_\(i)"
             dict["title"] = "\(i + 1)号套餐"
@@ -45,7 +45,7 @@ class GoodListViewController: UIViewController
             dict["oldPrice"] = "2\(i)"
             dict["newPrice"] = "1\(i)"
             // 字典转模型并将模型添加到模型数组中
-            goodArray.append(GoodModel(dict: dict))
+            goodArray.append([GoodModel(dict: dict)])
         }
         
         prepareUI()
@@ -130,8 +130,23 @@ class GoodListViewController: UIViewController
 
 extension GoodListViewController: UITableViewDelegate, UITableViewDataSource
 {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "周一"
+        case 1: return "周二"
+        case 2: return "周三"
+        case 3: return "周四"
+        case 4: return "周五"
+        default: return "周末"
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return goodArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -143,7 +158,7 @@ extension GoodListViewController: UITableViewDelegate, UITableViewDataSource
         cell.selectionStyle = .none
         
         // 为cell传递数据
-        cell.goodModel = goodArray[indexPath.row]
+        cell.goodModel = goodArray[indexPath.section][indexPath.row]
         
         // 指定代理
         cell.delegate = self
@@ -183,7 +198,7 @@ extension GoodListViewController: GoodListCellDelegate
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         
         // 获取当前模型，添加到购物车模型数组
-        let model = goodArray[indexPath.row]
+        let model = goodArray[indexPath.section][indexPath.row]
         addGoodArray.append(model)
         
         // 重新计算iconView的frame，并开启动画

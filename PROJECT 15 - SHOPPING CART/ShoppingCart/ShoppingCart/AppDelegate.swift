@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         // 设置window的根控制器
-        window?.rootViewController = UINavigationController(rootViewController: GoodListViewController())
+        window?.rootViewController = MainViewController()
         
         // 设置window为主window并显示在窗口
         window?.makeKeyAndVisible()

@@ -9,10 +9,11 @@
 import UIKit
 import SnapKit
 
+fileprivate let NewFeatureCellIdentifier = "NewFeature"
+
 class NewFeatureViewController: UICollectionViewController
 {
     fileprivate let imageArray = ["guideImage1", "guideImage2", "guideImage3"]
-    fileprivate let NewFeatureCellIdentifier = "NewFeature"
     
     // MARK: - Lifecycle
     init() {
@@ -61,40 +62,43 @@ class NewFeatureViewController: UICollectionViewController
     
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count 
+        return imageArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewFeatureCellIdentifier, for: indexPath) as! NewFeatureCell
         if imageArray.count > 0 {
-            cell.image = UIImage(named: imageArray[(indexPath as NSIndexPath).item])
+            cell.image = UIImage(named: imageArray[indexPath.item])
         }
         return cell
     }
     
     // MARK: - UICollectionViewDelegate
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
-        // the last image
-        if (indexPath as NSIndexPath).item == imageArray.count - 1 {
-            // enter the main page
-            KeyWindow.rootViewController = MainViewController()
-        }
-    }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+//    {
+//        // the last image
+//        if indexPath.item == imageArray.count - 1 {
+//            // enter the main page
+//            KeyWindow.rootViewController = MainViewController()
+//        }
+//    }
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let currentPage = Int(scrollView.contentOffset.x / self.view.bounds.width + 0.5)
         pageControl.currentPage = currentPage
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x/self.view.bounds.width > (CGFloat(imageArray.count) - 1.5) {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView)
+    {
+        if scrollView.contentOffset.x/self.view.bounds.width > (CGFloat(imageArray.count) - 1.5)
+        {
             // hide pageControl at last page
             pageControl.isHidden = true
             
             // show the startButton at last page
-            startButton.isHidden = false
-            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.startButton.isHidden = false
+            })
         } else {
             pageControl.isHidden = false
             startButton.isHidden = true
@@ -102,7 +106,7 @@ class NewFeatureViewController: UICollectionViewController
     }
     
     // MARK: - lazy var
-    /// pageControl
+    
     fileprivate lazy var pageControl: UIPageControl = {
        let pc = UIPageControl()
         pc.numberOfPages = self.imageArray.count
@@ -110,22 +114,21 @@ class NewFeatureViewController: UICollectionViewController
         pc.currentPageIndicatorTintColor = UIColor.cyan
         return pc
     }()
-    
-    /// startButton
     fileprivate lazy var startButton: UIButton = {
         let startButton = UIButton(type: .custom)
         startButton.layer.cornerRadius = 18.0
         startButton.setTitle("Enter", for: UIControlState())
+        startButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
         startButton.setTitleColor(UIColor.white, for: UIControlState())
-        startButton.backgroundColor = UIColor.cyan
-        startButton.addTarget(self, action: #selector(didTappedStartButton), for: .touchUpInside)
+        startButton.backgroundColor = UIColor(r: 30, g: 144, b: 255)
+        startButton.addTarget(self, action: #selector(NewFeatureViewController.didTappedStartButton(_:)), for: .touchUpInside)
         startButton.isHidden = true
         return startButton
     }()
     
+    // Enter the main page
     @objc fileprivate func didTappedStartButton(_ btn: UIButton) {
-        let menuVC = MainViewController()
-        present(UINavigationController(rootViewController: menuVC), animated: true, completion: nil)
+        KeyWindow.rootViewController = MainViewController()
     }
     
     override var prefersStatusBarHidden : Bool {
