@@ -22,7 +22,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
         
         // a simple localization
         addViewController(MenuViewController(), title: NSLocalizedString("tab_menu", comment: ""))
-        addViewController(ProfileTableViewController(), title: NSLocalizedString("tab_profile", comment: ""))
+        addViewController(ProfileViewController(), title: NSLocalizedString("tab_profile", comment: ""))
         
         // UITabBarControllerDelegate
         delegate = self

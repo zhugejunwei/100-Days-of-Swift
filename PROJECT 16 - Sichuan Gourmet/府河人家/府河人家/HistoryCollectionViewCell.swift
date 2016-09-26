@@ -8,20 +8,25 @@
 
 import UIKit
 
-class HistoryTableViewCell: UITableViewCell
+class HistoryCollectionViewCell: UICollectionViewCell
 {
     var hisFood: Food? {
         didSet {
-            if let food = hisFood {
-                foodImage.kf_setImage(with: URL(string: food.foodImgName!)!, placeholder: UIImage(named: "placehodler"), options: [], progressBlock: nil, completionHandler: nil)
-                meatNameLabel.text = food.meatName
-                soupNameLabel.text = food.soupName
+            if let foodImageName = hisFood?.foodImgName {
+                foodImage.image = UIImage(named: foodImageName)
+            }
+            if let meatName = hisFood?.meatName {
+                meatNameLabel.text = meatName
+            }
+            if let soupName = hisFood?.soupName {
+                soupNameLabel.text = soupName
             }
         }
     }
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         setup()
     }
     
@@ -43,7 +48,7 @@ class HistoryTableViewCell: UITableViewCell
         }
         meatNameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(contentView.snp.top).offset(10)
-            make.left.equalTo(meatNameLabel.snp.right).offset(12)
+            make.left.equalTo(foodImage.snp.right).offset(12)
         }
         soupNameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(meatNameLabel.snp.bottom).offset(12)
@@ -52,9 +57,14 @@ class HistoryTableViewCell: UITableViewCell
     }
     
     // MARK: - lazy vars
-    fileprivate lazy var foodImage = UIImageView()
+    fileprivate lazy var foodImage: UIImageView = {
+        let view = UIImageView()
+        view.layer.cornerRadius = 15
+        view.layer.masksToBounds = true
+        return view
+    }()
 
-    fileprivate lazy var meatNameLabel = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+    fileprivate lazy var meatNameLabel = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 16))
     
-    fileprivate lazy var soupNameLabel = UILabel(textColor: UIColor.lightGray, font: UIFont.systemFont(ofSize: 11))
+    fileprivate lazy var soupNameLabel = UILabel(textColor: UIColor.lightGray, font: UIFont.systemFont(ofSize: 13))
 }

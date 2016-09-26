@@ -17,8 +17,11 @@ class MenuViewController: UIViewController
     // MARK: - Property
     
     // food array
-    fileprivate var foodArray = [Array<Food>]()
-    
+    fileprivate var foodArray = [Array<Food>]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     fileprivate let foodListCellIdentifier = "foodListCell"
     
     // food in shopping cart
@@ -27,6 +30,8 @@ class MenuViewController: UIViewController
     fileprivate var path: UIBezierPath?
     
     var layer: CALayer?
+    
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +54,23 @@ class MenuViewController: UIViewController
         }
         
         prepareUI()
+    }
+    
+    func getList(_ refreshControl: UIRefreshControl) {
+        foodArray.removeAll()
+        foodArray = [Array<Food>]()
+        for i in 0..<9 {
+            var dict = [String:Any]()
+            dict["foodImgName"] = "goodicon_\(i)"
+            dict["meatName"] = "超好吃的\(i + 1)号大肉"
+            dict["soupName"] = "美滋滋的\(i + 1)号菜汤"
+            dict["originPrice"] = "8"
+            dict["vipPrice"] = "6.8"
+            // 字典转模型并将模型添加到模型数组中
+            foodArray.append([Food(dict: dict)])
+        }
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +99,14 @@ class MenuViewController: UIViewController
         // register cell
         tableView.register(MenuListCell.self, forCellReuseIdentifier: foodListCellIdentifier)
         
+        // Pull to refresh
+        tableView.refreshControl = self.refreshControl
+        refreshControl.addTarget(self, action: #selector(MenuViewController.getList), for: .valueChanged)
+        self.refreshControl.backgroundColor = UIColor(red:0.113, green:0.113, blue:0.145, alpha:1)
+        let attributes = [NSForegroundColorAttributeName: UIColor.white]
+        let dateString = DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Last updated on \(dateString)", attributes: attributes)
+        self.refreshControl.tintColor = UIColor.white
     }
     
     fileprivate func layoutUI() {

@@ -10,18 +10,30 @@ import UIKit
 import Kingfisher
 import SnapKit
 
-class UserTableViewCell: UITableViewCell
+class UserCollectionViewCell: UICollectionViewCell
 {
     var user: User?
         {
         didSet {
-            if let _ = user {
-                headImgView.kf_setImage(with: URL(string: user!.headImg!)!, placeholder: UIImage(named: "pc_default_avatar"), options: [], progressBlock: nil, completionHandler: nil)
-                userNameLabel.text = user!.userName
-                mobileNumber.text = user!.mobile
-                address.text = user!.address
-                birthMonth.text = user?.birthMonth
-                birthDay.text = user?.birthDay
+            if let headImg = user?.headImg {
+                headImgView.image = UIImage(named: headImg)
+            }
+            
+            if let userName = user?.userName {
+                userNameLabel.text = userName
+            }
+            if let mobile = user?.mobile {
+                mobileNumber.text = mobile
+            }
+            if let addr = user?.address {
+                address.text = addr
+            }
+            if let birthMon = user?.birthMonth {
+                birthMonth.text = birthMon
+            }
+            if let birthD = user?.birthDay {
+                birthDay.text = birthD
+
             }
         }
     }
@@ -33,19 +45,24 @@ class UserTableViewCell: UITableViewCell
     
     weak var parentViewController: UIViewController?
     
-    static var g_self : UserTableViewCell?
+    static var g_self : UserCollectionViewCell?
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         setup()
     }
 
-    func setup() {
+    func setup()
+    {
+        UserCollectionViewCell.g_self = self
+        
+        backgroundColor = UIColor.white
+        
         contentView.addSubview(headImgView)
         contentView.addSubview(userNameLabel)
         contentView.addSubview(giftboxImg)
@@ -86,13 +103,15 @@ class UserTableViewCell: UITableViewCell
         }
         birthMonth.snp.makeConstraints { (make) in
             make.left.equalTo(giftboxImg.snp.right).offset(10)
-            make.top.equalTo(userNameLabel.snp.bottom).offset(15)
-            make.right.equalTo(shopCarBtn.snp.left).offset(15)
+            make.top.equalTo(userNameLabel.snp.bottom).offset(12)
+            make.width.equalTo(20)
+            make.bottom.equalTo(giftboxImg.snp.bottom)
         }
         birthDay.snp.makeConstraints { (make) in
             make.left.equalTo(birthMonth.snp.right).offset(5)
-            make.top.equalTo(userNameLabel.snp.bottom).offset(15)
-            make.right.equalTo(shopCarBtn.snp.left).offset(15)
+            make.top.equalTo(userNameLabel.snp.bottom).offset(12)
+            make.width.equalTo(15)
+            make.bottom.equalTo(giftboxImg.snp.bottom)
         }
         mobileLabel.snp.makeConstraints { (make) in
             make.left.equalTo(headImgView)
@@ -136,53 +155,55 @@ class UserTableViewCell: UITableViewCell
         headimage.layer.borderWidth = 0.5
         headimage.layer.borderColor = UIColor.lightGray.cgColor
         headimage.isUserInteractionEnabled = true
-        headimage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UserTableViewCell.clickHeadImage)))
+        headimage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UserCollectionViewCell.clickHeadImage)))
         return headimage
     }()
     fileprivate lazy var userNameLabel: UILabel = {
         let userName = UILabel()
-        userName.font = UIFont.init(name: "CODE LIGHT", size: 15.0)
+        userName.font = UIFont.systemFont(ofSize: 17)
         userName.text = "诸葛俊伟";
         return userName
     }()
     
     // gift box img
-    fileprivate lazy var giftboxImg: UIImageView = {
-        let gift = UIImageView()
-        gift.image = UIImage(named: "giftbox")
+    fileprivate lazy var giftboxImg: UIButton = {
+        let gift = UIButton(type: .custom)
+        gift.setBackgroundImage(UIImage(named: "giftbox"), for: UIControlState())
         gift.isUserInteractionEnabled = false
         return gift
     }()
     
     // birthday and birthMonth
-    fileprivate lazy var birthMonth = UILabel(textColor: UIColor.lightGray, font: UIFont.init(name: "CODE LIGHT", size: 11)!)
-    fileprivate lazy var birthDay = UILabel(textColor: UIColor.lightGray, font: UIFont.init(name: "CODE LIGHT", size: 11)!)
+    fileprivate lazy var birthMonth: UILabel = {
+        let month = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 11))
+        return month
+    }()
+    fileprivate lazy var birthDay: UILabel = {
+        let day = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 11))
+        return day
+    }()
     
     // mobile label and number
     fileprivate lazy var mobileLabel: UILabel = {
-        let mobile = UILabel()
-        let label = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 11))
-        label.text = "Mobile"
+        let mobile = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        mobile.text = "Mobile"
         return mobile
     }()
-    fileprivate lazy var mobileNumber = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 11))
+    fileprivate lazy var mobileNumber = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 12))
     
     // address label and value
     fileprivate lazy var addressLabel: UILabel = {
-        let address = UILabel()
-        let label = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 11))
-        label.text = "Address"
+        let address = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 13))
+        address.text = "Address"
         return address
     }()
-    fileprivate lazy var address = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 11))
+    fileprivate lazy var address = UILabel(textColor: UIColor.black, font: UIFont.systemFont(ofSize: 12))
     
     // cart btn and remind btn
-    fileprivate lazy var shopCarBtn = UIButton(title: nil, imageName: "shoppingCar_35x35", target:g_self! , selector: #selector(UserTableViewCell.clickCar), font: nil, titleColor: nil)
-    fileprivate lazy var remindBtn: UIButton = {
-        let remindBtn = UIButton(type: .custom)
-        
-        return remindBtn
-    }()
+    fileprivate lazy var shopCarBtn = UIButton(title: nil, imageName: "shoppingCar_35x35", target:g_self! , selector: #selector(UserCollectionViewCell.clickCar), font: nil, titleColor: nil)
+    
+    fileprivate lazy var remindBtn = UIButton(title: nil, imageName: "setIcon_35x35", target: g_self!, selector: #selector(UserCollectionViewCell.clickRemindBtn), font: nil, titleColor: nil)
+
     
     // two breakers
     fileprivate lazy var mobileLine = UIImageView(image: UIImage(named: "f_loginfo_line_0x61"))

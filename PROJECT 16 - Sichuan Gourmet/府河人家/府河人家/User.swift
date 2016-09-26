@@ -15,13 +15,13 @@ class User: NSObject
     var userName: String?
     
     var headImg: String?
-        {
-        didSet{
-            if !headImg!.hasPrefix("http://") {
-                headImg = "http://static.htxq.net/" + headImg!
-            }
-        }
-    }
+//        {
+//        didSet{
+//            if !headImg!.hasPrefix("http://") {
+//                headImg = "http://static.htxq.net/" + headImg!
+//            }
+//        }
+//    }
     
     var mobile: String?
     
