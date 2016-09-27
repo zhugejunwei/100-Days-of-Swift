@@ -62,5 +62,9 @@ PROJECT 15 - SHOPPINGCART ANIMATION
 
 ![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2015%20-%20SHOPPING%20CART/shoppingCartAnimation.gif)
 
+PROJECT 16 - SICHUAN GOURMET
+
+![](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/PROJECT%2016%20-%20Sichuan%20Gourmet/giphy2.gif)
+
 ## LICENSE
 The code is distributed under the terms and conditions of the [MIT license](https://github.com/zhugejunwei/100-Days-of-Swift/blob/master/LICENSE).
