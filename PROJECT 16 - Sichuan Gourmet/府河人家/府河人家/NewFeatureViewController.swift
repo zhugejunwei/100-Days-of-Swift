@@ -73,16 +73,6 @@ class NewFeatureViewController: UICollectionViewController
         return cell
     }
     
-    // MARK: - UICollectionViewDelegate
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-//    {
-//        // the last image
-//        if indexPath.item == imageArray.count - 1 {
-//            // enter the main page
-//            KeyWindow.rootViewController = MainViewController()
-//        }
-//    }
-    
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let currentPage = Int(scrollView.contentOffset.x / self.view.bounds.width + 0.5)
         pageControl.currentPage = currentPage

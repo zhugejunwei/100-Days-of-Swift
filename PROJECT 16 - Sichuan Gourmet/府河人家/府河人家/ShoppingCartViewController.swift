@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class ShoppingCartViewController: UIViewController
+class ShoppingCartViewController: UIViewController, UIGestureRecognizerDelegate
 {
     // MARK: - Property
     
@@ -37,7 +37,9 @@ class ShoppingCartViewController: UIViewController
     
     fileprivate func prepareUI() {
         navigationItem.title = "Shopping Cart"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(ShoppingCartViewController.didTappedBackButton))
+        let backButton = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(ShoppingCartViewController.didTappedBackButton))
+        navigationItem.leftBarButtonItem = backButton
+        
         view.backgroundColor = UIColor.white
         tableView.rowHeight = 80
         tableView.register(ShoppingCartCell.self, forCellReuseIdentifier: shoppingCartCellIdentifier)

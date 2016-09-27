@@ -25,7 +25,7 @@ class MenuViewController: UIViewController
     fileprivate let foodListCellIdentifier = "foodListCell"
     
     // food in shopping cart
-    fileprivate var addFoodArray = [Food]()
+    var addFoodArray = [Food]()
     
     fileprivate var path: UIBezierPath?
     
@@ -89,11 +89,10 @@ class MenuViewController: UIViewController
         
         // shopping cart button
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: cartButton)
-        
         // count label
         navigationController?.navigationBar.addSubview(addCountLabel)
         navigationController?.navigationBar.tintColor = UIColor.white
-        
+
         view.addSubview(tableView)
         
         // register cell
@@ -213,7 +212,6 @@ extension MenuViewController: MenuListCellDelegate
         // retrieve the current food model, add it to shopping cart model
         let model = foodArray[indexPath.section][indexPath.row]
         addFoodArray.append(model)
-        
         // recalculate the frame of imageView, start animation
         var rect = tableView.rectForRow(at: indexPath)
         rect.origin.y -= tableView.contentOffset.y

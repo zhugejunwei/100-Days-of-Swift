@@ -4,34 +4,43 @@
 //
 //  Created by 诸葛俊伟 on 9/22/16.
 //  Copyright © 2016 Sichuan Gourmet. All rights reserved.
-//
+
 
 import UIKit
 
-let LoginoutNotify = "LoginoutNotify"
-
-class SettingViewController: UIViewController {
+class SettingViewController: UITableViewController, UIGestureRecognizerDelegate
+{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         // 全屏右滑退出
+        let target = self.navigationController?.interactivePopGestureRecognizer?.delegate
+        let pan = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
+        pan.delegate = self
+        self.view.addGestureRecognizer(pan)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 
-        // Do any additional setup after loading the view.
+    }
+    
+    fileprivate func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer,
+                                                  shouldRecognizeSimultaneouslyWith otherGestureRecognizer:
+        UIGestureRecognizer) -> Bool {
+        if self.childViewControllers.count == 1 {
+            return false
+        }
+        return true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 0
     }
-    */
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
 }

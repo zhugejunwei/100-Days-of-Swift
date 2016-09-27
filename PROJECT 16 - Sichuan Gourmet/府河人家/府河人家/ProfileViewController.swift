@@ -84,9 +84,9 @@ class ProfileViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     @objc fileprivate func gotoSetting() {
-        let setting = UIStoryboard.init(name: "SettingViewController", bundle: nil).instantiateInitialViewController()
-        setting?.navigationItem.title = "Setting"
-        navigationController?.pushViewController(setting!, animated: true)
+        let settingViewVC = SettingViewController()
+        settingViewVC.navigationItem.title = "Settings"
+        navigationController?.pushViewController(settingViewVC, animated: true)
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -100,16 +100,23 @@ class ProfileViewController: UICollectionViewController, UICollectionViewDelegat
             return 1
         }
     }
+    let menuViewController = MenuViewController()
+    
+    func clickShopCar() {
+        let shoppingCartVC = ShoppingCartViewController()
+        shoppingCartVC.addFoodArray = menuViewController.addFoodArray
+        present(UINavigationController(rootViewController: shoppingCartVC), animated: true, completion: nil)
+    }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCellIdentifier, for: indexPath) as! UserCollectionViewCell
             cell.user = user
             cell.clickShopCar = {
-                ALinLog("点击了购物车")
+                self.clickShopCar()
             }
             cell.clickRemind = {
-                ALinLog("点击了Remind")
+                self.clickAlert("RemindCarBtn", "You just clicked RemindCarBtn")
             }
             cell.parentViewController = self
             return cell
@@ -120,6 +127,21 @@ class ProfileViewController: UICollectionViewController, UICollectionViewDelegat
             cell.hisFood = food![indexPath.item]
         }
         return cell
+    }
+    
+    fileprivate func clickAlert(_ title: String, _ message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
+            switch action.style {
+            case .default:
+                print("default")
+            case .cancel:
+                print("cancel")
+            case .destructive:
+                print("destructive")
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
