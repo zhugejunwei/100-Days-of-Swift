@@ -1,4 +1,8 @@
-## 100 Days of Swift ##
+# 100 Days of Swift 
+![](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+![](https://img.shields.io/badge/supporting-Swift3.0-orange.svg)
+![](https://img.shields.io/badge/build-passing-brightgreen.svg)
+
 I started learning Swift from July, and keep coding with Swift every day. I tried to build some enjoyable APPs. Inspired by Sam Lu's [100 Days of Swift](http://samvlu.com/index.html) project, I built this repository to record my progression.
 
 ## Projects and GIFs
