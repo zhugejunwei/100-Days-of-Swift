@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIKit
-
 extension UIColor
 {
     /**
